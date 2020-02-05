@@ -57,3 +57,4 @@ stages:
     input:
     containerRegistry: 'JT749TenableCSDemo'
     repository: '$(imageRepository)'
+    command: 'push'
