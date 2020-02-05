@@ -34,10 +34,7 @@ stages:
         command: build
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
-        containerRegistry: 'TenableCSDemoACR'
-        repository: '$(imageRepository)'
-        command: 'push'
-        displayName: Push Image to Registry
+      
 
         
         tags: |
@@ -53,4 +50,9 @@ stages:
       inputs:
        scriptPath: tiocs-azure-on-prem-scanner.sh
        args: '$(TIOACCESSKEY) $(TIOSECRETKEY) $(TIOJFROGPASS)'
-       
+
+
+    task: Docker@2 
+    displayName: Push Image to Registry
+    containerRegistry: 'JT749TenableCSDemo'
+    repository: '$(imageRepository)'
