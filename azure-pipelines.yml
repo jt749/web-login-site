@@ -34,6 +34,10 @@ stages:
         command: build
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
+        containerRegistry: 'TenableCSDemoACR'
+        repository: '$(imageRepository)'
+        command: 'push'
+
         
         tags: |
           $(tag)
