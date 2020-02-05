@@ -42,3 +42,9 @@ stages:
         azureSubscription: 'Azure subscription 1(ad271415-4e34-4ccb-999f-c2854714529a)'
         KeyVaultName: 'JT749CSTESTKEYVAULT'
         SecretsFilter: '*'
+
+    - task: ShellScript@2
+      displayName: Assessing image for vulnerabilities
+      inputs:
+       scriptPath: tiocs-azure-on-prem-scanner.sh
+       args: '$(TIOACCESSKEY) $(TIOSECRETKEY) $(TIOJFROGPASS)'
