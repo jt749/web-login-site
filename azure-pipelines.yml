@@ -37,6 +37,7 @@ stages:
         containerRegistry: 'TenableCSDemoACR'
         repository: '$(imageRepository)'
         command: 'push'
+        displayName: Push Image to Registry
 
         
         tags: |
