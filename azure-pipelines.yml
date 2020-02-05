@@ -53,7 +53,7 @@ stages:
 
 
     - task: Docker@2
-    input:
+    inputs:
       containerRegistry: 'JT749TenableCSDemo'
       repository: '$(imageRepository)'
       command: 'push'
