@@ -52,9 +52,3 @@ stages:
        args: '$(TIOACCESSKEY) $(TIOSECRETKEY) $(TIOJFROGPASS)'
 
 
-    - task: Docker@2
-    
-        containerRegistry: 'JT749TenableCSDemo'
-    repository: '$(imageRepository)'
-    command: 'push'
-    displayName: Push Image to Registry
