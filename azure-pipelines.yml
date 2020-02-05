@@ -54,7 +54,7 @@ stages:
 
     - task: Docker@2
     inputs:
-      containerRegistry: 'JT749TenableCSDemo'
-      repository: '$(imageRepository)'
-      command: 'push'
-      displayName: Push Image to Registry
+        containerRegistry: 'JT749TenableCSDemo'
+    repository: '$(imageRepository)'
+    command: 'push'
+    displayName: Push Image to Registry
